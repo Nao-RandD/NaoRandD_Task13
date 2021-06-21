@@ -21,19 +21,42 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="ERn-6K-HO2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="ERn-6K-HO2" customClass="CustomViewCell" customModule="AppDojoTask13" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="424" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ERn-6K-HO2" id="GdY-ap-lup">
                                             <rect key="frame" x="0.0" y="0.0" width="424" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M7p-Ga-zxi">
+                                                    <rect key="frame" x="20" y="6" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="Qxm-zn-AAh"/>
+                                                        <constraint firstAttribute="width" constant="32" id="tWe-Bh-6kB"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uA5-2z-FB6">
+                                                    <rect key="frame" x="76" y="11.5" width="41.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="uA5-2z-FB6" firstAttribute="centerY" secondItem="GdY-ap-lup" secondAttribute="centerY" id="0hX-7q-ujI"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uA5-2z-FB6" secondAttribute="trailing" constant="20" symbolic="YES" id="2gN-Vj-UWO"/>
+                                                <constraint firstItem="M7p-Ga-zxi" firstAttribute="centerY" secondItem="GdY-ap-lup" secondAttribute="centerY" id="eIX-aL-nLa"/>
+                                                <constraint firstItem="M7p-Ga-zxi" firstAttribute="leading" secondItem="GdY-ap-lup" secondAttribute="leading" constant="20" symbolic="YES" id="ewq-GL-6b6"/>
+                                                <constraint firstItem="uA5-2z-FB6" firstAttribute="leading" secondItem="GdY-ap-lup" secondAttribute="leadingMargin" constant="56" id="p79-Kw-YZ7"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkImageView" destination="M7p-Ga-zxi" id="rMu-72-Jgs"/>
+                                            <outlet property="imageView" destination="M7p-Ga-zxi" id="wzv-LK-gML"/>
+                                            <outlet property="label" destination="uA5-2z-FB6" id="gaw-4f-a7U"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Yba-SN-awz"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="g7Z-ld-Blx"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
