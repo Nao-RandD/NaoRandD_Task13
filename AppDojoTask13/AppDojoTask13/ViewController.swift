@@ -9,8 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    let tableItems: [Dictionary<String, Any>] = [
+    @IBOutlet private weak var tableView: UITableView!
+    private let tableItems: [Dictionary<String, Any>] = [
         ["fruit": "りんご", "check": false],
          ["fruit":"みかん", "check":true],
         ["fruit":"バナナ", "check":false],
@@ -38,7 +38,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         guard let check =  tableItems[indexPath.row]["check"] as? Bool else { return cell }
 
         cell.configuration(label: label, check: check)
-        
+
         return cell
     }
 }
