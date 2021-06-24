@@ -7,19 +7,23 @@
 
 import UIKit
 
+struct CheckItem {
+    var name: String
+    var isChecked: Bool
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
-    private let tableItems: [Dictionary<String, Any>] = [
-        ["fruit": "りんご", "check": false],
-         ["fruit":"みかん", "check":true],
-        ["fruit":"バナナ", "check":false],
-        ["fruit":"パイナップル", "check":true]
+    private let tableItems: [CheckItem] = [
+        CheckItem(name: "りんご", isChecked: false),
+        CheckItem(name: "みかん", isChecked: true),
+        CheckItem(name: "バナナ", isChecked: false),
+        CheckItem(name: "パイナップル", isChecked: true),
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -28,16 +32,13 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                numberOfRowsInSection section: Int) -> Int {
-        return tableItems.count
+        tableItems.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell  = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomViewCell
+        let cell  = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CheckItemCell
 
-        guard let label = tableItems[indexPath.row]["fruit"] as? String else { return cell }
-        guard let check =  tableItems[indexPath.row]["check"] as? Bool else { return cell }
-
-        cell.configuration(label: label, check: check)
+        cell.configure(checkItem: tableItems[indexPath.row])
 
         return cell
     }

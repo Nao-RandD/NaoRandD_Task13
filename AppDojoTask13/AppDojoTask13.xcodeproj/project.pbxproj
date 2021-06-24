@@ -13,7 +13,7 @@
 		9F8FA4092675EB5400C5821D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FA4072675EB5400C5821D /* Main.storyboard */; };
 		9F8FA40B2675EB5700C5821D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FA40A2675EB5700C5821D /* Assets.xcassets */; };
 		9F8FA40E2675EB5700C5821D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FA40C2675EB5700C5821D /* LaunchScreen.storyboard */; };
-		9F8FA416267A175400C5821D /* CustumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FA415267A175400C5821D /* CustumViewCell.swift */; };
+		9F8FA416267A175400C5821D /* CheckItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FA415267A175400C5821D /* CheckItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		9F8FA40A2675EB5700C5821D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F8FA40D2675EB5700C5821D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F8FA40F2675EB5700C5821D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F8FA415267A175400C5821D /* CustumViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustumViewCell.swift; sourceTree = "<group>"; };
+		9F8FA415267A175400C5821D /* CheckItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				9F8FA40A2675EB5700C5821D /* Assets.xcassets */,
 				9F8FA40C2675EB5700C5821D /* LaunchScreen.storyboard */,
 				9F8FA40F2675EB5700C5821D /* Info.plist */,
-				9F8FA415267A175400C5821D /* CustumViewCell.swift */,
+				9F8FA415267A175400C5821D /* CheckItemCell.swift */,
 			);
 			path = AppDojoTask13;
 			sourceTree = "<group>";
@@ -143,7 +143,7 @@
 				9F8FA4062675EB5400C5821D /* ViewController.swift in Sources */,
 				9F8FA4022675EB5400C5821D /* AppDelegate.swift in Sources */,
 				9F8FA4042675EB5400C5821D /* SceneDelegate.swift in Sources */,
-				9F8FA416267A175400C5821D /* CustumViewCell.swift in Sources */,
+				9F8FA416267A175400C5821D /* CheckItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
